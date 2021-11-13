@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>Finapp</title>
+    <meta name="description" content="Finapp HTML Mobile Template">
+    <meta name="keywords"
+        content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive" />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icon/192x192.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+   
+
+    <!-- App Header -->
+    <div class="appHeader">
+        <div class="left">
+            <a href="#" class="headerButton goBack">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </a>
+        </div>
+        <div class="pageTitle">
+            Exchange
+        </div>
+        <div class="right">
+            <a href="#" class="headerButton" onclick="toastbox('toast-1', 2000)">
+                <ion-icon name="refresh"></ion-icon>
+            </a>
+        </div>
+    </div>
+    <!-- * App Header -->
+
+    <!-- toast top -->
+    <div id="toast-1" class="toast-box toast-top tap-to-close bg-primary">
+        <div class="in">
+            <div class="text">
+                Exchange rates have been updated!
+            </div>
+        </div>
+    </div>
+    <!-- * toast top -->
+
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+
+
+        <form action="app-pages.html">
+
+           
+               
+                    
+                        <div class="form-group basic p-0">
+                            <h3 style="text-align: center;">LBP ></h3>
+                            <div style="text-align: center;" class="mb-1">
+                                
+                   
+                                <img src="../assets/img/sample/icons/leb.png" alt="image" class="imaged w64">
+                           
+                            </div>
+                               <br>
+                               <h2 style="text-align: center;" id="input"></h2>
+
+                        </div>
+                       
+                        <div style="text-align: center;" class="mb-1">
+                                
+                   
+                            <img src="../assets/img/sample/icons/exchange.png" alt="image" class="imaged w32">
+                       
+                        </div>
+                        <h3 style="text-align: center;">SYRIA></h3>
+                        <div style="text-align: center;" class="mb-1">
+                            
+               
+                            <img src="../assets/img/sample/icons/syria.png" alt="image" class="imaged w64">
+                       
+                        </div>
+                       <h2 style="text-align: center;" id="output">3,500S.L</h2>
+                          
+                    </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+    
+        </form>
+
+
+    </div>
+
+
+
+    <!--keybord    --------------------------------------->
+
+    <div class="section full mt-2" style="background-color: #161129;">
+     
+    
+        <div class="buttons" style="text-align: center;">
+     
+          <div class="leftPanel">
+            <div class="numbers">
+              <div id="7"><h2>7</h2></div>
+              <div id="8"><h2>8</h2></div>
+             <div id="9" ><h2>9</h2></div>
+             
+            
+            </div>
+              
+             
+            </div>
+            <div class="numbers">
+              <div id="4"><h2>4</h2></div>
+              <div id="5"><h2>5</h2></div>
+              <div id="6"><h2>6</h2></div>
+            </div>
+            <div class="numbers">
+              <div id="1"><h2>1</h2></div>
+              <div id="2"><h2>2</h2></div>
+              <div id="3"><h2>3</h2></div>
+            </div>
+            <div class="numbers">
+              <div id="0"><h2>0</h2></div>
+              <div id="dec"><h2>.</h2></div>
+              <div id="clear"><h2>X</h2></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+     </div>
+      <!--*keyboar =-===------------------------------------------------->
+    <!-- * App Capsule -->
+
+
+
+    <!-- ========= JS Files =========  -->
+    <!-- Bootstrap -->
+    <script src="../assets/js/lib/bop.min.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <script src="../assets/js/plugins/splidw/splide.min.js"></script>
+    <!-- Apex Charts -->
+    <script src="../assets/js/plugins/apexcharts/apexcharts.min.js"></script>
+    <!-- Base Js File -->
+    <script src="../assets/js/index.js"></script>
+
+
+
+
+<style>
+    
+body1 {
+  width: 500px;
+  margin: 4% auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 5px;
+  font-size: 1.8rem;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
+
+
+.calculator {
+ background-color: #161129;
+
+}
+
+
+
+.buttons {}
+
+.operators {}
+
+
+
+
+
+.operators div:active {
+  font-weight: bold;
+}
+
+.leftPanel {
+  display: inline-block;
+}
+
+.numbers div {
+ 
+  display: inline-block;
+ 
+  border-radius: 12px;
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 4px 10px 0;
+  cursor: pointer;
+  background-color: #161129;
+  transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+}
+
+
+
+
+
+    </style>
+
+
+</body>
+
+</html>

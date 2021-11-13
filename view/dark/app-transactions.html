@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Finapp - Mobile Template</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finapp HTML Mobile Template">
+    <meta name="keywords" content="bootstrap, mobile template, cordova, phonegap, mobile, html, responsive" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" sizes="32x32">
+    <link rel="shortcut icon" href="../assets/img/favicon.png">
+</head>
+
+<body onload="getdata();">
+    <script
+
+    
+    type="text/javascript" src="../assets/js/firebasePrices.js">
+
+
+</script>
+    <!-- loader -->
+    <div id="loader">
+        <img src="../assets/img/logo-icon.png" alt="icon" class="loading-icon">
+    </div>
+    <!-- * loader -->
+
+    <div class="appHeader">
+        <div class="left">
+            <a href="javascript:;" class="headerButton goBack">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </a>
+        </div>
+        <div class="pageTitle">اسعار السلع</div>
+        <div class="right"></div>
+    </div>
+    <!-- * App Header -->
+
+    <!-- Extra Header -->
+    <div class="extraHeader">
+        <ul class="nav nav-tabs style1" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" onclick="getdata();" role="tab">
+                    لبنان
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" onclick="getSdata();" role="tab">
+                     سوريا
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- * Extra Header -->
+
+<br>
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+
+        <!-- Transactions -->
+
+        <div class="section mt-2">
+            <div class="section-title">الحوم</div>
+            <div class="transactions">
+              <!-- item -->
+              <a href="app-transaction-detail.html" class="item">
+                <div class="right">
+                    <div class="price text-danger" id="cow">5,000L.L</div>
+                </div>
+                
+                <div class="detail">
+                    <div>
+                        <strong>لحم بقر</strong>
+                        <p>1 KG</p>
+                    </div>
+                    <img src="../assets/img/sample/icons/cow_meat.png" alt="img" class="image-block imaged w48">
+                   
+                </div>
+                
+            </a>
+            <!-- * item -->
+               <!-- item -->
+               <a href="app-transaction-detail.html" class="item">
+                <div class="right">
+                    <div class="price text-danger" id="lamb">5,000L.L</div>
+                </div>
+                
+                <div class="detail">
+                    <div>
+                        <strong>لحم غنم</strong>
+                        <p>1 KG</p>
+                    </div>
+                    <img src="../assets/img/sample/icons/meat.png" alt="img" class="image-block imaged w48">
+                   
+                </div>
+                
+            </a>
+            <!-- * item -->
+                <!-- item -->
+                <a href="app-transaction-detail.html" class="item">
+                    <div class="right">
+                        <div class="price text-danger" id="chicken">5,000L.L</div>
+                    </div>
+                    
+                    <div class="detail">
+                        <div>
+                            <strong>دجاج</strong>
+                            <p>1 KG</p>
+                        </div>
+                        <img src="../assets/img/sample/icons/chicken.png" alt="img" class="image-block imaged w48">
+                       
+                    </div>
+                    
+                </a>
+                <!-- * item -->
+                <!-- item -->
+                <a href="app-transaction-detail.html" class="item">
+                    <div class="right">
+                        <div class="price text-danger" id="fish">5,000L.L</div>
+                    </div>
+                    
+                    <div class="detail">
+                        <div>
+                            <strong>سمك</strong>
+                            <p>1 KG</p>
+                        </div>
+                        <img src="../assets/img/sample/icons/fish.png" alt="img" class="image-block imaged w48">
+                       
+                    </div>
+                    
+                </a>
+                <!-- * item -->
+               
+            </div>
+        </div>
+        <!-- * Transactions -->
+
+        <!-- Transactions -->
+        <div class="section mt-2">
+            <div class="section-title">مشتريات</div>
+            <div class="transactions">
+       <!-- item -->
+       <a href="app-transaction-detail.html" class="item">
+        <div class="right">
+            <div class="price text-danger" id="water">5,000L.L</div>
+        </div>
+        
+        <div class="detail">
+            <div>
+                <strong>مياه</strong>
+                <p>2 LITER</p>
+            </div>
+            <img src="../assets/img/sample/icons/water.png" alt="img" class="image-block imaged w48">
+           
+        </div>
+        
+    </a>
+    <!-- * item -->
+             <!-- item -->
+             <a href="app-transaction-detail.html" class="item">
+                <div class="right">
+                    <div class="price text-danger" id="bread">5,000L.L</div>
+                </div>
+                
+                <div class="detail">
+                    <div>
+                        <strong>خبز</strong>
+                        <p>For 12 بيض</p>
+                    </div>
+                    <img src="../assets/img/sample/icons/bread.webp" alt="img" class="image-block imaged w48">
+                   
+                </div>
+                
+            </a>
+            <!-- * item -->
+                <!-- item -->
+                <a href="app-transaction-detail.html" class="item">
+                    <div class="right">
+                        <div class="price text-danger" id="egg">5,000L.L</div>
+                    </div>
+                    
+                    <div class="detail">
+                        <div>
+                            <strong>بيض</strong>
+                            <p>1 KG</p>
+                        </div>
+                        <img src="../assets/img/sample/icons/eggs.png" alt="img" class="image-block imaged w48">
+                       
+                    </div>
+                    
+                </a>
+                <!-- * item -->
+                <!-- sugar -->
+                <a href="app-transaction-detail.html" class="item">
+                    <div class="right">
+                        <div class="price text-danger" id="sugar">5,000L.L</div>
+                    </div>
+                    
+                    <div class="detail">
+                        <div>
+                            <strong>سكر</strong>
+                            <p>1 KG</p>
+                        </div>
+                        <img src="../assets/img/sample/icons/sugar.png" alt="img" class="image-block imaged w48">
+                       
+                    </div>
+                    
+                </a>
+                <!-- * sugar -->
+                                <!-- item -->
+                <a href="app-transaction-detail.html" class="item">
+                    <div class="right">
+                        <div class="price text-danger" id="cofe">5,000L.L</div>
+                    </div>
+                    
+                    <div class="detail">
+                        <div>
+                            <strong>قهوة</strong>
+                            <p>1 KG</p>
+                        </div>
+                        <img src="../assets/img/sample/icons/coffee.webp" alt="img" class="image-block imaged w48">
+                       
+                    </div>
+                    
+                </a>
+                <!-- * item -->
+            </div>
+        </div>
+        <!-- * Transactions -->
+
+        <!-- Transactions -->
+        <div class="section mt-2">
+            <div class="section-title">النفط ومشتقاته</div>
+            <div class="transactions">
+                <!-- item -->
+                <a href="app-transaction-detail.html" class="item">
+                    <div class="right">
+                        <div class="price text-danger" id="gas">5,000L.L</div>
+                    </div>
+                    
+                    <div class="detail">
+                        <div>
+                            <strong>غاز</strong>
+                            <p>12 KG</p>
+                        </div>
+                        <img src="../assets/img/sample/icons/gas.png" alt="img" class="image-block imaged w48">
+                       
+                    </div>
+                    
+                </a>
+                <!-- * item -->
+               <!-- item -->
+               <a href="app-transaction-detail.html" class="item">
+                <div class="right">
+                    <div class="price text-danger" id="g95">5,000L.L</div>
+                </div>
+                
+                <div class="detail">
+                    <div>
+                        <strong>بنزين ٩٥ أوكتان</strong>
+                        <p>1 LITER</p>
+                    </div>
+                    <img src="../assets/img/sample/icons/octan_f.webp" alt="img" class="image-block imaged w48">
+                   
+                </div>
+                
+            </a>
+            <!-- * item -->
+           <!-- item -->
+           <a href="app-transaction-detail.html" class="item">
+            <div class="right">
+                <div class="price text-danger" id="g98">5,000L.L</div>
+            </div>
+            
+            <div class="detail">
+                <div>
+                    <strong>بنزين ٩٨ أوكتان</strong>
+                    <p>1 LITER</p>
+                </div>
+                <img src="../assets/img/sample/icons/95_f.png" alt="img" class="image-block imaged w48">
+               
+            </div>
+            
+        </a>
+        <!-- * item -->
+             <!-- item -->
+             <a href="app-transaction-detail.html" class="item">
+                <div class="right">
+                    <div class="price text-danger" id="disl">5,000L.L</div>
+                </div>
+                
+                <div class="detail">
+                    <div>
+                        <strong>ديزل</strong>
+                        <p>1 LITER</p>
+                    </div>
+                    <img src="../assets/img/sample/icons/octan-oil.png" alt="img" class="image-block imaged w48">
+                   
+                </div>
+                
+            </a>
+            <!-- * item -->
+            </div>
+        </div>
+        <!-- * Transactions -->
+ <!-- Transactions -->
+ <div class="section mt-4">
+    <div class="section-title">
+        الموارد والعملات الرقمية
+        
+    </div>
+    <div class="transactions">
+ <!-- item -->
+ <a href="app-transaction-detail.html" class="item">
+    <div class="right">
+        <div class="price text-danger" id="gold">5,000L.L</div>
+    </div>
+    
+    <div class="detail">
+        <div>
+            <strong>ذهب</strong>
+            <p>1 GRAM</p>
+        </div>
+        <img src="../assets/img/sample/icons/gold.webp" alt="img" class="image-block imaged w48">
+       
+    </div>
+    
+</a>
+<!-- * item -->
+       <!-- item -->
+       <a href="app-transaction-detail.html" class="item">
+        <div class="right">
+            <div class="price text-danger" id="oil">5,000L.L</div>
+        </div>
+        
+        <div class="detail">
+            <div>
+                <strong>نفط</strong>
+                <p>1 GALLON</p>
+            </div>
+            <img src="../assets/img/sample/icons/oil.png" alt="img" class="image-block imaged w48">
+           
+        </div>
+        
+    </a>
+    <!-- * item -->
+     <!-- item -->
+     <a href="app-transaction-detail.html" class="item">
+        <div class="right">
+            <div class="price text-danger" id="bit">5,000L.L</div>
+        </div>
+        
+        <div class="detail">
+            <div>
+                <strong>بيتكوين</strong>
+                <p>1 COIN</p>
+            </div>
+            <img src="../assets/img/sample/icons/bitcoin.webp" alt="img" class="image-block imaged w48">
+           
+        </div>
+        
+    </a>
+    <!-- * item -->
+   <!-- item -->
+   <a href="app-transaction-detail.html" class="item">
+    <div class="right">
+        <div class="price text-danger" id="eth">5,000L.L</div>
+    </div>
+    
+    <div class="detail">
+        <div>
+            <strong>إيزيريوم</strong>
+            <p>1 COIN</p>
+        </div>
+        <img src="../assets/img/sample/icons/eth.png" alt="img" class="image-block imaged w48">
+       
+    </div>
+    
+</a>
+<!-- * item -->
+    </div>
+</div>
+<!-- * Transactions -->
+        
+<br>
+        
+
+
+    </div>
+    <!-- * App Capsule -->
+
+ <!-- App Bottom Menu -->
+ <div class="appBottomMenu">
+    <a href="app-settings.html" class="item">
+        <div class="col">
+            <img src="../assets/img/sample/icons/more_white.png" alt="img" class="image-block imaged w24">
+            <strong>المزيد</strong>
+        </div>
+        <a href="app-transactions.html" class="item active">
+            <div class="col">
+                <img src="../assets/img/sample/icons/price_blue.png" alt="img" class="image-block imaged w24">
+                <strong>ألاسعار</strong>
+            </div>
+        </a>
+    </a>
+    <a href="ar-index.html" class="item">
+        <div class="col">
+            <img src="../assets/img/sample/icons/homel.png" alt="img" class="image-block imaged w24">
+            <strong>الرئيسية</strong>
+        </div>
+    </a>
+
+
+    
+</div>
+<!-- * App Bottom Menu -->
+   
+
+    <!-- ///////////// Js Files ////////////////////  -->
+    <!-- Jquery -->
+    <script src="../assets/js/lib/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="../assets/js/lib/popper.min.js"></script>
+    <script src="../assets/js/lib/bootstrap.min.js"></script>
+    <!-- Ionicons -->
+    <script src="../../../../unpkg.com/ionicons%405.0.0/dist/ionicons.js"></script>
+    <!-- Owl Carousel -->
+    <script src="../assets/js/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Base Js File -->
+    <script src="../assets/js/base.js"></script>
+
+
+
+<!-- firebase --------->
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+
+apiKey: "AIzaSyA9F9f6e_p6wlL8MzngFLNPf7fe1Dntt-g",
+
+authDomain: "sho-s3ro.firebaseapp.com",
+
+databaseURL: "https://sho-s3ro-default-rtdb.firebaseio.com",
+
+projectId: "sho-s3ro",
+
+storageBucket: "sho-s3ro.appspot.com",
+
+messagingSenderId: "374838538187",
+
+appId: "1:374838538187:web:5c6df9d0556dd2eef3d04e",
+
+measurementId: "G-5MMN5RVQTD"
+
+};
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+<!--fire base is done babe-->
+
+
+
+
+</body>
+
+
+
+</html>
