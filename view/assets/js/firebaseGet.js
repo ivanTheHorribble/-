@@ -1,5 +1,6 @@
 function getdata() {
     
+    let nf = new Intl.NumberFormat('en-US')
 
     document.getElementById("lbpMain").style.display = 'none';
     document.getElementById("buyText").style.display = 'none';
@@ -20,7 +21,7 @@ function getdata() {
     document.getElementById("loadd7").style.display = 'block';
     document.getElementById("loadd8").style.display = 'block';
     document.getElementById("loadd9").style.display = 'block';
-    document.getElementById("newsTitle").innerHTML="Lebanon Hot News";
+ 
 
 
 
@@ -37,11 +38,12 @@ function getdata() {
 
       
 
-        document.getElementById("lbpMain").innerHTML=lbpBuy;
-        document.getElementById("buyText").innerHTML=lbpBuy;
-        document.getElementById("sellText").innerHTML=lbpSell;
-        document.getElementById("pBuyText").innerHTML=PrlbpB;
-        document.getElementById("pSellText").innerHTML=PrlbpS;
+        document.getElementById("lbpMain").innerHTML= nf.format(lbpBuy) + '' + "L.L.";
+
+        document.getElementById("buyText").innerHTML= nf.format(lbpBuy) + '' + "L.L.";
+        document.getElementById("sellText").innerHTML=nf.format(lbpSell) + '' + "L.L.";
+        document.getElementById("pBuyText").innerHTML=nf.format(PrlbpB) + '' + "L.L.";
+        document.getElementById("pSellText").innerHTML=nf.format(PrlbpS) + '' + "L.L.";
     
         document.getElementById("lbpMain").style.display = 'block';
         document.getElementById("buyText").style.display = 'block';
@@ -68,10 +70,10 @@ function getdata() {
         var disl=snapshot.val().disl;
 
         
-        document.getElementById("disl").innerHTML=disl;
-        document.getElementById("g98").innerHTML=g98;
-        document.getElementById("g95").innerHTML=g95;
-        document.getElementById("gas").innerHTML=gas;
+        document.getElementById("disl").innerHTML=nf.format(disl) + '' + "L.L.";
+        document.getElementById("g98").innerHTML=nf.format(g98) + '' + "L.L.";
+        document.getElementById("g95").innerHTML=nf.format(g95) + '' + "L.L.";
+        document.getElementById("gas").innerHTML=nf.format(gas) + '' + "L.L.";
 
         document.getElementById("disl").style.display = 'block';
         document.getElementById("g98").style.display = 'block';
@@ -95,6 +97,7 @@ function getdata() {
 
 function getdataSyr() {
     
+    let nf = new Intl.NumberFormat('en-US')
 
 
     document.getElementById("lbpMain").style.display = 'none';
@@ -116,7 +119,7 @@ function getdataSyr() {
     document.getElementById("loadd7").style.display = 'block';
     document.getElementById("loadd8").style.display = 'block';
     document.getElementById("loadd9").style.display = 'block';
-    document.getElementById("newsTitle").innerHTML="Syria Hot News";
+
 
 
 
@@ -129,11 +132,11 @@ function getdataSyr() {
         var PrsyrS=snapshot.val().PrSyrS;
 
 
-        document.getElementById("lbpMain").innerHTML=syBuy;
-        document.getElementById("buyText").innerHTML=syBuy;
-        document.getElementById("sellText").innerHTML=sySell;
-        document.getElementById("pBuyText").innerHTML=PrsyrB;
-        document.getElementById("pSellText").innerHTML=PrsyrS;
+        document.getElementById("lbpMain").innerHTML=nf.format(syBuy) + '' + " S.L.";
+        document.getElementById("buyText").innerHTML=nf.format(syBuy) + '' + " S.L.";
+        document.getElementById("sellText").innerHTML=nf.format(sySell) + '' + " S.L.";
+        document.getElementById("pBuyText").innerHTML=nf.format(PrsyrB) + '' + " S.L.";
+        document.getElementById("pSellText").innerHTML=nf.format(PrsyrS) + '' + " S.L.";
 
         document.getElementById("lbpMain").style.display = 'block';
         document.getElementById("buyText").style.display = 'block';
@@ -158,10 +161,10 @@ function getdataSyr() {
         var disl=snapshot.val().disl;
 
         
-        document.getElementById("disl").innerHTML=disl;
-        document.getElementById("g98").innerHTML=g98;
-        document.getElementById("g95").innerHTML=g95;
-        document.getElementById("gas").innerHTML=gas;
+        document.getElementById("disl").innerHTML=nf.format(disl) + '' + " S.L.";
+        document.getElementById("g98").innerHTML=nf.format(g98) + '' + " S.L.";
+        document.getElementById("g95").innerHTML=nf.format(g95) + '' + " S.L.";
+        document.getElementById("gas").innerHTML=nf.format(gas) + '' + " S.L.";
 
         document.getElementById("disl").style.display = 'block';
         document.getElementById("g98").style.display = 'block';

@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+        <meta name="viewport" content= "width=device-width, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#000000">
@@ -28,26 +29,23 @@
                 <ion-icon name="chevron-back-outline"></ion-icon>
             </a>
         </div>
-        <div class="pageTitle">
-            Exchange
+        <div class="pageTitle" style="font-family: lateef, sarif; font-size: 30px;">
+            محول ألعملة
         </div>
         <div class="right">
-            <a href="#" class="headerButton" onclick="toastbox('toast-1', 2000)">
-                <ion-icon name="refresh"></ion-icon>
+            <a href="#" onclick="myFunction()" class="headerButton" onclick="toast('toast-1', 2000)">
+                <div id="snackbar">تم تحديث أسعر ألصرف</div>
+                <img id="img1" src="../assets/img/sample/icons/refresh.webp" alt="image" class="imaged w32">
+
             </a>
+
+    
+
+
         </div>
     </div>
     <!-- * App Header -->
 
-    <!-- toast top -->
-    <div id="toast-1" class="toast-box toast-top tap-to-close bg-primary">
-        <div class="in">
-            <div class="text">
-                Exchange rates have been updated!
-            </div>
-        </div>
-    </div>
-    <!-- * toast top -->
 
 
     <!-- App Capsule -->
@@ -57,12 +55,12 @@
 
 
         <a data-toggle="modal" data-target="#actionSheetIconed">
-                            <h3 style="text-align: center;">LBP ></h3>
-                            <div style="text-align: center;" class="mb-1">
+                            <h3 style="text-align: center;" id="n1">LBP ></h3>
+                            <div style="text-align: center;" class="mb-1" >
                                 
                                 
-                                <img src="../assets/img/sample/icons/leb.png" alt="image" class="imaged w64">
-                          
+                                <img id="img1" src="../assets/img/sample/icons/leb.png" alt="image" class="imaged w64">
+            
                             </div>
                              </a>
                                <h2 style="text-align: center;" id="input">20,000L.L</h2>
@@ -77,11 +75,11 @@
                         </div>
                         <a data-toggle="modal" data-target="#actionSheetIconed1">
 
-                        <h3 style="text-align: center;">SYRIA></h3>
+                        <h3 style="text-align: center;" id="n2">SYRIA></h3>
                         <div style="text-align: center;" class="mb-1">
                             
                
-                            <img src="../assets/img/sample/icons/syria.png" alt="image" class="imaged w64">
+                            <img id="img2" src="../assets/img/sample/icons/syria.png" alt="image" class="imaged w64">
                        
                         </div>
                         </a>
@@ -104,7 +102,7 @@
 
     <!--keybord    --------------------------------------->
 
-    <div class="section full mt-2" style="background-color: #fff; height: 50%;">
+    <div class="section full mt-2" style="background-color: #fff; height: max-content;">
      
     
         <div class="buttons" style="text-align: center;">
@@ -142,7 +140,7 @@
      </div>
       <!--*keyboar =-===------------------------------------------------->
     <!-- * App Capsule -->
-<br><br>
+
 <!-- App Bottom Menu -->
 <div class="appBottomMenu">
     <a href="info.html" class="item">
@@ -199,7 +197,7 @@
             </div>
             <div class="modal-body">
                 <ul class="action-button-list">
-                    <li>
+                    <li id="l1">
                         <a href="#" class="btn btn-list" data-dismiss="modal">
                             <span >
                              
@@ -212,7 +210,7 @@
                         </a>
                     </li>
                     <li class="action-divider"></li>
-                    <li>
+                    <li id="d1">
                         <a href="#" class="btn btn-list" data-dismiss="modal">
                             <span >
                              
@@ -220,12 +218,12 @@
                                 
                                 
                             </span>
-                            <h5 class="modal-title">ألدولار</h5>
+                            <h5 class="modal-title" id="d1">ألدولار</h5>
                             <img src="../assets/img/sample/icons/dollar.png" alt="img" class="image-block imaged w24">
                         </a>
                     </li>
                     <li class="action-divider"></li>
-                    <li>
+                    <li id="s1">
                         <a href="#" class="btn btn-list" data-dismiss="modal">
                             <span >
                              
@@ -238,7 +236,7 @@
                         </a>
                     </li>
                     <li class="action-divider"></li>
-                    <li>
+                    <li id="e1">
                         <a href="#" class="btn btn-list" data-dismiss="modal">
                             <span >
                              
@@ -268,7 +266,7 @@
             </div>
             <div class="modal-body">
                 <ul class="action-button-list">
-                    <li>
+                    <li id="l1d">
                         <a href="#" class="btn btn-list" data-dismiss="modal">
                             <span >
                              
@@ -281,7 +279,7 @@
                         </a>
                     </li>
                     <li class="action-divider"></li>
-                    <li>
+                    <li id="d1d">
                         <a href="#" class="btn btn-list" data-dismiss="modal">
                             <span >
                              
@@ -292,9 +290,9 @@
                             <h5 class="modal-title">ألدولار</h5>
                             <img src="../assets/img/sample/icons/dollar.png" alt="img" class="image-block imaged w24">
                         </a>
-                    </li>
+                    </li >
                     <li class="action-divider"></li>
-                    <li>
+                    <li id="s1d">
                         <a href="#" class="btn btn-list" data-dismiss="modal">
                             <span >
                              
@@ -307,7 +305,7 @@
                         </a>
                     </li>
                     <li class="action-divider"></li>
-                    <li>
+                    <li id="e1d">
                         <a href="#" class="btn btn-list" data-dismiss="modal">
                             <span >
                              
@@ -329,7 +327,42 @@
 
 
 
+
    
+    <!-- firebase --------->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+
+            apiKey: "AIzaSyA9F9f6e_p6wlL8MzngFLNPf7fe1Dntt-g",
+
+            authDomain: "sho-s3ro.firebaseapp.com",
+
+            databaseURL: "https://sho-s3ro-default-rtdb.firebaseio.com",
+
+            projectId: "sho-s3ro",
+
+            storageBucket: "sho-s3ro.appspot.com",
+
+            messagingSenderId: "374838538187",
+
+            appId: "1:374838538187:web:5c6df9d0556dd2eef3d04e",
+
+            measurementId: "G-5MMN5RVQTD"
+
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!--fire base is done babe-->
+
+
 
     <script src="../assets/js/lib/jquery-3.4.1.min.js"></script>
     <!-- Bootstrap-->
@@ -340,24 +373,21 @@
     <!-- Owl Carousel -->
     <script src="../assets/js/plugins/owl-carousel/owl.carousel.min.js"></script>
     <!-- Base Js File -->
-    <script src="../assets/js/base.js"></script>
-
+    <script src="../assets/js/index.js"></script>
+   
 
 
 <style>
     
-body1 {
-  width: 100%;
-  margin: 4% auto;
-  font-family: 'Source Sans Pro', sans-serif;
-  letter-spacing: 5px;
-  font-size: 1.8rem;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+
+
+.body{
+
+height: 100%;
+
+
+
 }
-
-
 
 
 

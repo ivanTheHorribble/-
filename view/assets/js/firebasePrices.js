@@ -1,5 +1,6 @@
 function getdata() {
     
+    let nf = new Intl.NumberFormat('en-US')
 
     document.getElementById("oil").innerHTML="Loading..";
     document.getElementById("gold").innerHTML="Loading..";
@@ -33,10 +34,10 @@ function getdata() {
 
         //now we have data in variables
         //now show them in our html
-        document.getElementById("bit").innerHTML=bit;
-        document.getElementById("gold").innerHTML=gold;
-        document.getElementById("oil").innerHTML=oil;
-        document.getElementById("eth").innerHTML=eth;
+        document.getElementById("bit").innerHTML=nf.format(bit) + '' + "L.L";
+        document.getElementById("gold").innerHTML=nf.format(gold) + ' ' + " L.L.";
+        document.getElementById("oil").innerHTML=nf.format(oil) + ' ' + " L.L.";;
+        document.getElementById("eth").innerHTML=nf.format(eth) + ' ' + " L.L.";;
 
             //meats Section
 
@@ -48,10 +49,10 @@ function getdata() {
             var chicken=snapshot.val().chicken;
     
             
-            document.getElementById("cow").innerHTML=cow;
-            document.getElementById("fish").innerHTML=fish;
-            document.getElementById("chicken").innerHTML=chicken;
-            document.getElementById("lamb").innerHTML=lamb;
+            document.getElementById("cow").innerHTML=nf.format(cow) + ' ' + " L.L.";
+            document.getElementById("fish").innerHTML=nf.format(fish) + ' ' + " L.L.";
+            document.getElementById("chicken").innerHTML=nf.format(chicken) + ' ' + " L.L.";
+            document.getElementById("lamb").innerHTML=nf.format(lamb) + ' ' + " L.L.";
     
 
 
@@ -66,11 +67,11 @@ function getdata() {
                 var cofe=snapshot.val().cofe;
         
                 
-                document.getElementById("cofe").innerHTML=cofe;
-                document.getElementById("sugar").innerHTML=sugar;
-                document.getElementById("egg").innerHTML=egg;
-                document.getElementById("bread").innerHTML=bread;
-                document.getElementById("water").innerHTML=water;
+                document.getElementById("cofe").innerHTML=nf.format(cofe) + ' ' + " L.L.";;
+                document.getElementById("sugar").innerHTML=nf.format(sugar) + ' ' + " L.L.";;
+                document.getElementById("egg").innerHTML=nf.format(egg) + ' ' + " L.L.";;
+                document.getElementById("bread").innerHTML=nf.format(bread) + ' ' + " L.L.";;
+                document.getElementById("water").innerHTML=nf.format(water) + ' ' + " L.L.";;
 
   //gas Section
                 firebase.database().ref('price/gas').once('value').then(function (snapshot) {
@@ -81,10 +82,10 @@ function getdata() {
                     var disl=snapshot.val().disl;
             
                     
-                    document.getElementById("disl").innerHTML=disl;
-                    document.getElementById("g98").innerHTML=g98;
-                    document.getElementById("g95").innerHTML=g95;
-                    document.getElementById("gas").innerHTML=gas;
+                    document.getElementById("disl").innerHTML=nf.format(disl) + ' ' + " L.L.";
+                    document.getElementById("g98").innerHTML=nf.format(g98) + ' ' + " L.L.";
+                    document.getElementById("g95").innerHTML=nf.format(g95) + ' ' + " L.L.";
+                    document.getElementById("gas").innerHTML=nf.format(gas) + ' ' + " L.L.";
             
         })
         
@@ -131,10 +132,11 @@ function getSdata() {
 
         //now we have data in variables
         //now show them in our html
-        document.getElementById("bit").innerHTML=bit;
-        document.getElementById("gold").innerHTML=gold;
-        document.getElementById("oil").innerHTML=oil;
-        document.getElementById("eth").innerHTML=eth;
+        document.getElementById("bit").innerHTML=nf.format(bit) + '' + " S.L.";
+        document.getElementById("gold").innerHTML=nf.format(gold) + ' ' + " S.L.";
+        document.getElementById("oil").innerHTML=nf.format(oil) + ' ' + " S.L.";;
+        document.getElementById("eth").innerHTML=nf.format(eth) + ' ' + " S.L.";;
+
 
             //meats Section
 
@@ -145,12 +147,13 @@ function getSdata() {
             var fish=snapshot.val().fish;
             var chicken=snapshot.val().chicken;
     
-            
-            document.getElementById("cow").innerHTML=cow;
-            document.getElementById("fish").innerHTML=fish;
-            document.getElementById("chicken").innerHTML=chicken;
-            document.getElementById("lamb").innerHTML=lamb;
+                     
+            document.getElementById("cow").innerHTML=nf.format(cow) + ' ' + " S.L.";
+            document.getElementById("fish").innerHTML=nf.format(fish) + ' ' + " S.L.";
+            document.getElementById("chicken").innerHTML=nf.format(chicken) + ' ' + " S.L.";
+            document.getElementById("lamb").innerHTML=nf.format(lamb) + ' ' + " S.L.";
     
+
 
 
         //needs section
@@ -164,11 +167,12 @@ function getSdata() {
                 var cofe=snapshot.val().cofe;
         
                 
-                document.getElementById("cofe").innerHTML=cofe;
-                document.getElementById("sugar").innerHTML=sugar;
-                document.getElementById("egg").innerHTML=egg;
-                document.getElementById("bread").innerHTML=bread;
-                document.getElementById("water").innerHTML=water;
+                document.getElementById("cofe").innerHTML=nf.format(cofe) + ' ' + " S.L.";;
+                document.getElementById("sugar").innerHTML=nf.format(sugar) + ' ' + " S.L.";;
+                document.getElementById("egg").innerHTML=nf.format(egg) + ' ' + " S.L.";;
+                document.getElementById("bread").innerHTML=nf.format(bread) + ' ' + " S.L.";;
+                document.getElementById("water").innerHTML=nf.format(water) + ' ' + " S.L.";;
+
 
   //gas Section
                 firebase.database().ref('Sprice/gas').once('value').then(function (snapshot) {
@@ -178,11 +182,10 @@ function getSdata() {
                     var g98=snapshot.val().g98;
                     var disl=snapshot.val().disl;
             
-                    
-                    document.getElementById("disl").innerHTML=disl;
-                    document.getElementById("g98").innerHTML=g98;
-                    document.getElementById("g95").innerHTML=g95;
-                    document.getElementById("gas").innerHTML=gas;
+                    document.getElementById("disl").innerHTML=nf.format(disl) + ' ' + " S.L.";
+                    document.getElementById("g98").innerHTML=nf.format(g98) + ' ' + " S.L.";
+                    document.getElementById("g95").innerHTML=nf.format(g95) + ' ' + " S.L.";
+                    document.getElementById("gas").innerHTML=nf.format(gas) + ' ' + " S.L.";
             
         })
         
