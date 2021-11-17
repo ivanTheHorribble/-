@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+        <meta name="viewport" content= "width=device-width, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#000000">
@@ -17,7 +18,8 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<body>
+<body onload="converter();">
+    <script src="../assets/js/main.js"></script>
 
    
 
@@ -28,49 +30,44 @@
                 <ion-icon name="chevron-back-outline"></ion-icon>
             </a>
         </div>
-        <div class="pageTitle">
-            Exchange
+        <div class="pageTitle" style="font-family: lateef, sarif; font-size: 30px;">
+            محول ألعملة
         </div>
         <div class="right">
-            <a href="#" class="headerButton" onclick="toastbox('toast-1', 2000)">
-                <ion-icon name="refresh"></ion-icon>
+            <a href="#" onclick="myFunction()" class="headerButton" onclick="toast('toast-1', 2000)">
+                <div id="snackbar">تم تحديث أسعر ألصرف</div>
+                <img id="img1" src="../assets/img/sample/icons/refresh.webp" alt="image" class="imaged w32">
+
             </a>
+
+    
+
+
         </div>
     </div>
     <!-- * App Header -->
 
-    <!-- toast top -->
-    <div id="toast-1" class="toast-box toast-top tap-to-close bg-primary">
-        <div class="in">
-            <div class="text">
-                Exchange rates have been updated!
-            </div>
-        </div>
-    </div>
-    <!-- * toast top -->
 
 
     <!-- App Capsule -->
-    <div id="appCapsule">
+    <div id="appCapsule" style="padding-top: 35px; padding-bottom: 0px;">
 
 
-        <form action="app-pages.html">
 
-           
-               
-                    
-                        <div class="form-group basic p-0">
-                            <h3 style="text-align: center;">LBP ></h3>
-                            <div style="text-align: center;" class="mb-1">
+
+        <a data-toggle="modal" data-target="#actionSheetIconed">
+            <br>
+                            <h3 style="text-align: center; font-family: lateef , sarif ; font-size: 24px;" id="n1"><ليرة لبنانية</h3>
+                            <div style="text-align: center;" class="mb-1" >
                                 
-                   
-                                <img src="../assets/img/sample/icons/leb.png" alt="image" class="imaged w64">
-                           
+                                
+                                <img id="img1" src="../assets/img/sample/icons/leb.png" alt="image" class="imaged w64">
+            
                             </div>
-                               <br>
-                               <h2 style="text-align: center;" id="input"></h2>
+                             </a>
+                               <h2 style="text-align: center;" id="input">20,000 L.L</h2>
 
-                        </div>
+                        
                        
                         <div style="text-align: center;" class="mb-1">
                                 
@@ -78,14 +75,17 @@
                             <img src="../assets/img/sample/icons/exchange.png" alt="image" class="imaged w32">
                        
                         </div>
-                        <h3 style="text-align: center;">SYRIA></h3>
+                        <a data-toggle="modal" data-target="#actionSheetIconed1">
+
+                        <h3 style="text-align: center; font-family: lateef , sarif; font-size: 24px;" id="n2"><دولار امريكي</h3>
                         <div style="text-align: center;" class="mb-1">
                             
                
-                            <img src="../assets/img/sample/icons/syria.png" alt="image" class="imaged w64">
+                            <img id="img2" src="../assets/img/sample/icons/dollar.png" alt="image" class="imaged w64">
                        
                         </div>
-                       <h2 style="text-align: center;" id="output">3,500S.L</h2>
+                        </a>
+                       <h2 style="text-align: center;" id="output">1 $</h2>
                           
                     </div>
                         </div>
@@ -95,7 +95,7 @@
             </div>
 
     
-        </form>
+       
 
 
     </div>
@@ -104,19 +104,19 @@
 
     <!--keybord    --------------------------------------->
 
-    <div class="section full mt-2" style="background-color: #161129;">
+    <div class="section full mt-2" style="background-color: #161129; height: max-content;">
      
     
         <div class="buttons" style="text-align: center;">
      
-          <div class="leftPanel">
+
+              
             <div class="numbers">
               <div id="7"><h2>7</h2></div>
               <div id="8"><h2>8</h2></div>
              <div id="9" ><h2>9</h2></div>
              
-            
-            </div>
+     
               
              
             </div>
@@ -132,7 +132,7 @@
             </div>
             <div class="numbers">
               <div id="0"><h2>0</h2></div>
-              <div id="dec"><h2>.</h2></div>
+              <div id="dec"><h2></h2></div>
               <div id="clear"><h2>X</h2></div>
             </div>
           </div>
@@ -143,43 +143,226 @@
       <!--*keyboar =-===------------------------------------------------->
     <!-- * App Capsule -->
 
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu">
+        <a href="more.html" class="item">
+            <div class="col">
+                <img src="../assets/img/sample/icons/more_black.png" alt="img" class="image-block imaged w24">
+                <strong style="font-family: 'Lateef',  serif; font-size: 15px;">المزيد</strong>
+            </div>
+            <a href="news.html" class="item">
+                <div class="col">
+                    <img src="../assets/img/sample/icons/newsbl.png" alt="img" class="image-block imaged w24">
+                    <strong style="font-family: 'Lateef',  serif; font-size: 15px;">ألاخبار</strong>
+                </div>
+     
+                <a href="convert.html" class="item active">
+                    <div class="col">
+                        <img src="../assets/img/sample/icons/convertbl.png" alt="img" class="image-block imaged w24">
+                        <strong style="font-family: 'Lateef',  serif; font-size: 15px;">محول العملة</strong>
+                    </div>
+                </a>
+            </a>
+            
+                
+            </a>
+            <a href="prices.html" class="item">
+                <div class="col">
+                    <img src="../assets/img/sample/icons/price_black.png" alt="img" class="image-block imaged w24">
+                    <strong style="font-family: 'Lateef',  serif; font-size: 15px;">ألاسعار</strong>
+                </div>
+            </a>
+        </a>
+        
+        <a href="home.html" class="item">
+            <div class="col">
+                <img src="../assets/img/sample/icons/home_black.png" alt="img" class="image-block imaged w24">
+                <strong style="font-family: 'Lateef',  serif; font-size: 15px;">الرئيسية</strong>
+            </div>
+        </a>
 
 
-    <!-- ========= JS Files =========  -->
-    <!-- Bootstrap -->
-    <script src="../assets/js/lib/bop.min.js"></script>
+
+    </div>
+    <!-- * App Bottom Menu -->
+
+
+
+<br><br>
+
+ <!-- Iconed Action Sheet -->
+ <div class="modal fade action-sheet" id="actionSheetIconed" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div style="background-color: #161129;"class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">أختر عملة</h5>
+            </div>
+            <div class="modal-body">
+                <ul class="action-button-list">
+                    <li id="l1">
+                        <a href="#" class="btn btn-list" data-dismiss="modal">
+                            <span >
+                             
+                               
+                                
+                                
+                            </span>
+                            <h5 class="modal-title">أليرة ألبنانية</h5>
+                            <img src="../assets/img/sample/icons/lbp.png" alt="img" class="image-block imaged w24">
+                        </a>
+                    </li>
+                    <li class="action-divider"></li>
+                    <li id="d1">
+                        <a href="#" class="btn btn-list" data-dismiss="modal">
+                            <span >
+                             
+                               
+                                
+                                
+                            </span>
+                            <h5 class="modal-title" id="d1">ألدولار</h5>
+                            <img src="../assets/img/sample/icons/dollar.png" alt="img" class="image-block imaged w24">
+                        </a>
+                    </li>
+                    <li class="action-divider"></li>
+                    <li id="s1">
+                        <a href="#" class="btn btn-list" data-dismiss="modal">
+                            <span >
+                             
+                               
+                                
+                                
+                            </span>
+                            <h5 class="modal-title">أليرة ألسورية</h5>
+                            <img src="../assets/img/sample/icons/ls.png" alt="img" class="image-block imaged w24">
+                        </a>
+                    </li>
+                    <li class="action-divider"></li>
+                    <li id="e1">
+                        <a href="#" class="btn btn-list" data-dismiss="modal">
+                            <span >
+                             
+                               
+                                
+                                
+                            </span>
+                            <h5 class="modal-title">أليورو</h5>
+                            <img src="../assets/img/sample/icons/euroc.png" alt="img" class="image-block imaged w24">
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- * Iconed Action Sheet -->
+
+
+<!-- Iconed Action Sheet -->
+<div  class="modal fade action-sheet" id="actionSheetIconed1" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div style="background-color: #161129;"class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">أختر عملة</h5>
+            </div>
+            <div class="modal-body">
+                <ul class="action-button-list">
+                    <li id="l1d">
+                        <a href="#" class="btn btn-list" data-dismiss="modal">
+                            <span >
+                             
+                               
+                                
+                                
+                            </span>
+                            <h5 class="modal-title">أليرة ألبنانية</h5>
+                            <img src="../assets/img/sample/icons/lbp.png" alt="img" class="image-block imaged w24">
+                        </a>
+                    </li>
+                    <li class="action-divider"></li>
+                    <li id="d1d">
+                        <a href="#" class="btn btn-list" data-dismiss="modal">
+                            <span >
+                             
+                               
+                                
+                                
+                            </span>
+                            <h5 class="modal-title">ألدولار</h5>
+                            <img src="../assets/img/sample/icons/dollar.png" alt="img" class="image-block imaged w24">
+                        </a>
+                    </li >
+                    <li class="action-divider"></li>
+                    <li id="s1d">
+                        <a href="#" class="btn btn-list" data-dismiss="modal">
+                            <span >
+                             
+                               
+                                
+                                
+                            </span>
+                            <h5 class="modal-title">أليرة ألسورية</h5>
+                            <img src="../assets/img/sample/icons/ls.png" alt="img" class="image-block imaged w24">
+                        </a>
+                    </li>
+                    <li class="action-divider"></li>
+                    <li id="e1d">
+                        <a href="#" class="btn btn-list" data-dismiss="modal">
+                            <span >
+                             
+                               
+                                
+                                
+                            </span>
+                            <h5 class="modal-title">أليورو</h5>
+                            <img src="../assets/img/sample/icons/euroc.png" alt="img" class="image-block imaged w24">
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- * Iconed Action Sheet -->
+
+
+
+
+   
+  
+
+
+    <script src="../assets/js/lib/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="../assets/js/lib/popper.min.js"></script>
+    <script src="../assets/js/lib/bootstrap.min.js"></script>
     <!-- Ionicons -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!-- Splide -->
-    <script src="../assets/js/plugins/splidw/splide.min.js"></script>
-    <!-- Apex Charts -->
-    <script src="../assets/js/plugins/apexcharts/apexcharts.min.js"></script>
+    <script src="../../../../unpkg.com/ionicons%405.0.0/dist/ionicons.js"></script>
+    <!-- Owl Carousel -->
+    <script src="../assets/js/plugins/owl-carousel/owl.carousel.min.js"></script>
     <!-- Base Js File -->
-    <script src="../assets/js/index.js"></script>
 
+   
 
+   
 
 
 <style>
     
-body1 {
-  width: 500px;
-  margin: 4% auto;
-  font-family: 'Source Sans Pro', sans-serif;
-  letter-spacing: 5px;
-  font-size: 1.8rem;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+
+
+.body{
+
+height: 100%;
+
+
+
 }
 
 
 
-
-.calculator {
- background-color: #161129;
-
-}
 
 
 
@@ -204,7 +387,7 @@ body1 {
   display: inline-block;
  
   border-radius: 12px;
-  width: 100px;
+  width: 25%;
   text-align: center;
   padding: 10px;
   margin: 10px 4px 10px 0;

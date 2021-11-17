@@ -1,10 +1,4 @@
 
-  
-  firebase.database().ref('price/dollar').once('value').then(function (snapshot) {
-  var lbpBuy=snapshot.val().lbpB;     
-   var syBuy=snapshot.val().syrB;                             
-   var euro=snapshot.val().euroB
-  
 "use strict";
 
 
@@ -21,15 +15,16 @@ var input = document.getElementById('input'), // input/output button
   d1d = document.getElementById('d1d'), // number buttons
   s1d = document.getElementById('s1d'), // clear button
   e1d = document.getElementById('e1d'),
-  
 
  currencyTag = "L.L.",
  currencyTag1 = "S.L.";
- 
+ let
+ lbuy= "20000",
+ sbuy= "3500";
  let nf = new Intl.NumberFormat('en-US')
-let lbpRate = 1 / lbpBuy,
-dome = "";
-  syrRate = 1 / syBuy,
+let lbpRate = 1 / lbuy,
+   dome = "",
+  syrRate = 1 / sbuy,
   dollarRate = 1,
   upRate = lbpRate,
   dwnRate = syrRate,
@@ -288,7 +283,7 @@ s1d.addEventListener("click", function(e) {
     output.innerHTML = "1"+ '' + currencyTag1;
    
      });
-    })
+    
     function myFunction() {
       var x = document.getElementById("snackbar");
       x.className = "show";

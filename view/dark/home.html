@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar">
 
 
 <head>
@@ -22,34 +22,24 @@
 <!-- *firebase Script-------------------------------------------------------------------->
 
 <body onload="getdata();">
-    <script type="text/javascript" src="../assets/js/firebaseGet.js">
+    <script type="text/javascript" src="../assets/js/main.js">
 
 
     </script>
-    <!-- loader -->
-    <div id="loader">
-        <img src="../assets/img/logo-icon.png" alt="icon" class="loading-icon">
-    </div>
-    <!-- * loader -->
+
 
     <!-- App Header -->
     <div class="appHeader bg-primary text-light">
         <div class="left">
             <a href="#" class="headerButton" data-toggle="modal" data-target="#sidebarPanel">
-                <ion-icon name="menu-outline"></ion-icon>
+                <img src="../assets/img/sample/icons/dark.png" alt="image" class="imaged w32">
+         
             </a>
         </div>
         <div class="pageTitle">
-            <img src="../assets/img/logo.png" alt="logo" class="logo">
+           <h2 style="color: white;">Sho S3ro</h2>
         </div>
-        <div class="right">
         
-            <a href="../light/homeWhite.html" class="headerButton">
-                <img src="../assets/img/sample/icons/light.png" alt="image" class="imaged w32">
-            </a>
-           
-
-        </div>
     </div>
     <!-- * App Header -->
 
@@ -72,7 +62,7 @@
                     <div class="right">
                         <div id="loadd1" class="spinner-grow text-primary" role="status">
                         </div>
-                        <span class="title">Total Balance</span>
+                        <span class="title">أخر تحديث أليوم ٣:٤٥ م</span>
                         <h1 class="total" id='lbpMain'>...تحديث</h1>
                     </div>
                 </div>
@@ -83,37 +73,38 @@
 
 
                     <div class="item">
-                        <a href="#" data-toggle="modal" onClick="getdata();">
+                        <a href="#" data-toggle="modal" id="refresh">
                             <div class="icon-wrapper bg-warning">
                                 <img src="../assets/img/sample/icons/refresh.png" alt="img"
                                     class="image-block imaged w48">
                             </div>
-                            <strong>تحديث الاسعار</strong>
+                            <strong style="font-family: 'Lateef',  serif; font-size: 20px;">تحديث الاسعار</strong>
                         </a>
                     </div>
                     <div class="item">
-                        <a onClick="getdataEu();">
+                        <a id="eu">
                             <div class="icon-wrapper bg-success">
                                 <img src="../assets/img/sample/icons/euro.png" alt="img" class="image-block imaged w48">
                             </div>
-                            <strong>يورو</strong>
+                            <strong style="font-family: 'Lateef',  serif; font-size: 20px;">يورو</strong>
                         </a>
                     </div>
+                    
                     <div class="item">
-                        <a href="#" data-toggle="modal" onclick="getdataSyr();">
+                        <a href="#" data-toggle="modal" id="syr">
                             <div class="icon-wrapper">
                                 <img src="../assets/img/sample/icons/syria.png" alt="img"
                                     class="image-block imaged w48">
                             </div>
-                            <strong>الليرة السورية</strong>
+                            <strong style="font-family: 'Lateef',  serif; font-size: 20px;">الليرة السورية</strong>
                         </a>
                     </div>
                     <div class="item">
-                        <a href="#" data-toggle="modal" onClick="getdata();">
+                        <a href="#" data-toggle="modal" id="leb">
                             <div class="icon-wrapper bg-danger">
                                 <img src="../assets/img/sample/icons/leb.png" alt="img" class="image-block imaged w48">
                             </div>
-                            <strong>الليرة اللبنانية</strong>
+                            <strong style="font-family: 'Lateef',  serif; font-size: 20px;">الليرة اللبنانية</strong>
                         </a>
                     </div>
 
@@ -125,6 +116,9 @@
 
            
             <!-- Stats -->
+            <br>
+            <h2>أليوم</h2>
+
             <div class="section">
                 <div class="row mt-2">
                     <div class="col-6">
@@ -182,7 +176,7 @@
                         <div class="detail">
                             <div>
 
-                                <strong>غاز</strong>
+                                <strong style="font-family: 'Lateef',  serif; font-size: 25px;">غاز</strong>
                                 <p>12 KG</p>
                             </div>
                             <img src="../assets/img/sample/icons/gas.png" alt="img" class="image-block imaged w48">
@@ -201,7 +195,7 @@
 
                         <div class="detail">
                             <div>
-                                <strong>بنزين ٩٥ أوكتان</strong>
+                                <strong style="font-family: 'Lateef',  serif; font-size: 25px;">بنزين ٩٥ أوكتان</strong>
                                 <p>1 LITER</p>
                             </div>
                             <img src="../assets/img/sample/icons/octan_f.webp" alt="img" class="image-block imaged w48">
@@ -220,7 +214,7 @@
 
                         <div class="detail">
                             <div>
-                                <strong>بنزين ٩٨ أوكتان</strong>
+                                <strong style="font-family: 'Lateef',  serif; font-size: 25px;">بنزين ٩٨ أوكتان</strong>
                                 <p>1 LITER</p>
                             </div>
                             <img src="../assets/img/sample/icons/95_f.png" alt="img" class="image-block imaged w48">
@@ -239,7 +233,7 @@
 
                         <div class="detail">
                             <div>
-                                <strong>ديزل</strong>
+                                <strong style="font-family: 'Lateef',  serif; font-size: 25px;">ديزل</strong>
                                 <p>1 LITER</p>
                             </div>
                             <img src="../assets/img/sample/icons/octan-oil.png" alt="img"
@@ -251,113 +245,60 @@
                     <!-- * item -->
                 </div>
             </div>
-            <!-- * Transactions -->
+      
 
 
-            <div class="section mt-2 mb-2">
-                <a href="app-transactions.html" class="btn btn-primary btn-block btn-lg">مشاهدة الكل</a>
-            </div>
-            <!-- * item -->
-        </div>
+<br>
+    <div class="alert alert-outline-danger mb-1" role="alert" style="text-align: center; background-color: #161616;">
+        <h3 style="margin-bottom: 0px; text-align: center;";>!تنبيه!</h3>
+            <br>
+            نحن لا نبيع او نشتري اي عملات اجنبية وليس لدينا اي تأثير على سعر صرفها
     </div>
-    <!-- * Transactions -->
 
 
 
 
+     
 
-
-
-
-    <!-- News -->
-    <div class="section full mt-4 mb-3">
-        <div class="section-heading padding">
-            <a href="app-blog.html" class="link">مشاهدة المزيد</a>
-            <h2 class="title" id="newsTitle">اخر الاخبار</h2>
-
-        </div>
-        <div class="shadowfix carousel-multiple owl-carousel owl-theme">
-
-            <!-- item -->
-            <div class="item">
-                <a href="app-blog-post.html">
-                    <div class="blog-card">
-                        <img src="../assets/img/sample/photo/1.jpg" alt="image" class="imaged w-100">
-                        <div class="text">
-                            <h4 class="title">ماذا ستكون قيمة البيتكوين في اليوم التالي</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- * item -->
-
-            <!-- item -->
-            <div class="item">
-                <a href="app-blog-post.html">
-                    <div class="blog-card">
-                        <img src="../assets/img/sample/photo/2.jpg" alt="image" class="imaged w-100">
-                        <div class="text">
-                            <h4 class="title">قواعد عليك معرفتها في عالم التجارة</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- * item -->
-
-            <!-- item -->
-            <div class="item">
-                <a href="app-blog-post.html">
-                    <div class="blog-card">
-                        <img src="../assets/img/sample/photo/3.jpg" alt="image" class="imaged w-100">
-                        <div class="text">
-                            <h4 class="title">١٠ طرق لجمع المال</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- * item -->
-
-            <!-- item -->
-            <div class="item">
-                <a href="app-blog-post.html">
-                    <div class="blog-card">
-                        <img src="../assets/img/sample/photo/4.jpg" alt="image" class="imaged w-100">
-                        <div class="text">
-                            <h4 class="title">إتبع الخطة المالية لتحسين٠٠٠</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- * item -->
-
-        </div>
-    </div>
-    <!-- * News -->
-
-
-    <br>
-    <br>
+ 
     <!-- * App Capsule -->
 
 
     <!-- App Bottom Menu -->
     <div class="appBottomMenu">
-        <a href="app-settings.html" class="item">
+        <a href="more.html" class="item">
             <div class="col">
                 <img src="../assets/img/sample/icons/more_black.png" alt="img" class="image-block imaged w24">
-                <strong>المزيد</strong>
+                <strong style="font-family: 'Lateef',  serif; font-size: 15px;">المزيد</strong>
             </div>
-            <a href="app-transactions.html" class="item">
+            <a href="news.html" class="item">
+                <div class="col">
+                    <img src="../assets/img/sample/icons/newsbl.png" alt="img" class="image-block imaged w24">
+                    <strong style="font-family: 'Lateef',  serif; font-size: 15px;">ألاخبار</strong>
+                </div>
+     
+                <a href="convert.html" class="item">
+                    <div class="col">
+                        <img src="../assets/img/sample/icons/convert.png" alt="img" class="image-block imaged w24">
+                        <strong style="font-family: 'Lateef',  serif; font-size: 15px;">محول العملة</strong>
+                    </div>
+                </a>
+            </a>
+            
+                
+            </a>
+            <a href="prices.html" class="item">
                 <div class="col">
                     <img src="../assets/img/sample/icons/price_black.png" alt="img" class="image-block imaged w24">
-                    <strong>ألاسعار</strong>
+                    <strong style="font-family: 'Lateef',  serif; font-size: 15px;">ألاسعار</strong>
                 </div>
             </a>
         </a>
-        <a href="app-index.html" class="item active">
+        
+        <a href="home.html" class="item active">
             <div class="col">
                 <img src="../assets/img/sample/icons/home-bluel.png" alt="img" class="image-block imaged w24">
-                <strong>الرئيسية</strong>
+                <strong style="font-family: 'Lateef',  serif; font-size: 15px;">الرئيسية</strong>
             </div>
         </a>
 

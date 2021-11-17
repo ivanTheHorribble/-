@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="../assets/css/style1.css">
 </head>
 
-<body>
+<body onload="converter();">
+    <script src="../assets/js/main.js"></script>
 
    
 
@@ -55,7 +56,8 @@
 
 
         <a data-toggle="modal" data-target="#actionSheetIconed">
-                            <h3 style="text-align: center;" id="n1">LBP ></h3>
+            <br>
+                            <h3 style="text-align: center; font-family: lateef , sarif ; font-size: 24px;" id="n1"><ليرة لبنانية</h3>
                             <div style="text-align: center;" class="mb-1" >
                                 
                                 
@@ -63,7 +65,7 @@
             
                             </div>
                              </a>
-                               <h2 style="text-align: center;" id="input">20,000L.L</h2>
+                               <h2 style="text-align: center;" id="input">20,000 L.L</h2>
 
                         
                        
@@ -75,15 +77,15 @@
                         </div>
                         <a data-toggle="modal" data-target="#actionSheetIconed1">
 
-                        <h3 style="text-align: center;" id="n2">SYRIA></h3>
+                        <h3 style="text-align: center; font-family: lateef , sarif; font-size: 24px;" id="n2"><دولار امريكي</h3>
                         <div style="text-align: center;" class="mb-1">
                             
                
-                            <img id="img2" src="../assets/img/sample/icons/syria.png" alt="image" class="imaged w64">
+                            <img id="img2" src="../assets/img/sample/icons/dollar.png" alt="image" class="imaged w64">
                        
                         </div>
                         </a>
-                       <h2 style="text-align: center;" id="output">3,500S.L</h2>
+                       <h2 style="text-align: center;" id="output">1 $</h2>
                           
                     </div>
                         </div>
@@ -130,7 +132,7 @@
             </div>
             <div class="numbers">
               <div id="0"><h2>0</h2></div>
-              <div id="dec"><h2>.</h2></div>
+              <div id="dec"><h2></h2></div>
               <div id="clear"><h2>X</h2></div>
             </div>
           </div>
@@ -141,52 +143,52 @@
       <!--*keyboar =-===------------------------------------------------->
     <!-- * App Capsule -->
 
-<!-- App Bottom Menu -->
-<div class="appBottomMenu">
-    <a href="info.html" class="item">
-        <div class="col">
-            <img src="../assets/img/sample/icons/more_black.png" alt="img" class="image-block imaged w24">
-            <strong>المزيد</strong>
-        </div>
-        <a href="news.html" class="item">
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu">
+        <a href="more.html" class="item">
             <div class="col">
-                <img src="../assets/img/sample/icons/newsbl.png" alt="img" class="image-block imaged w24">
-                <strong>ألاخبار</strong>
+                <img src="../assets/img/sample/icons/more_black.png" alt="img" class="image-block imaged w24">
+                <strong style="font-family: 'Lateef',  serif; font-size: 15px;">المزيد</strong>
             </div>
- 
-            <a href="convert.html" class="item active">
+            <a href="news.html" class="item">
                 <div class="col">
-                    <img src="../assets/img/sample/icons/convertbl.png" alt="img" class="image-block imaged w24">
-                    <strong>محول العملة</strong>
+                    <img src="../assets/img/sample/icons/newsbl.png" alt="img" class="image-block imaged w24">
+                    <strong style="font-family: 'Lateef',  serif; font-size: 15px;">ألاخبار</strong>
+                </div>
+     
+                <a href="convert.html" class="item active">
+                    <div class="col">
+                        <img src="../assets/img/sample/icons/convertbl.png" alt="img" class="image-block imaged w24">
+                        <strong style="font-family: 'Lateef',  serif; font-size: 15px;">محول العملة</strong>
+                    </div>
+                </a>
+            </a>
+            
+                
+            </a>
+            <a href="prices.html" class="item">
+                <div class="col">
+                    <img src="../assets/img/sample/icons/price_black.png" alt="img" class="image-block imaged w24">
+                    <strong style="font-family: 'Lateef',  serif; font-size: 15px;">ألاسعار</strong>
                 </div>
             </a>
         </a>
         
-            
-        </a>
-        <a href="prices.html" class="item">
+        <a href="home.html" class="item">
             <div class="col">
-                <img src="../assets/img/sample/icons/price_black.png" alt="img" class="image-block imaged w24">
-                <strong>ألاسعار</strong>
+                <img src="../assets/img/sample/icons/home_black.png" alt="img" class="image-block imaged w24">
+                <strong style="font-family: 'Lateef',  serif; font-size: 15px;">الرئيسية</strong>
             </div>
         </a>
-    </a>
-    
-    <a href="home.html" class="item">
-        <div class="col">
-            <img src="../assets/img/sample/icons/home_black.png" alt="img" class="image-block imaged w24">
-            <strong>الرئيسية</strong>
-        </div>
-    </a>
 
 
 
-</div>
-<!-- * App Bottom Menu -->
+    </div>
+    <!-- * App Bottom Menu -->
 
 
 
-
+<br><br>
 
  <!-- Iconed Action Sheet -->
  <div class="modal fade action-sheet" id="actionSheetIconed" tabindex="-1" role="dialog">
@@ -329,39 +331,7 @@
 
 
    
-    <!-- firebase --------->
-    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
-
-    <script>
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-
-            apiKey: "AIzaSyA9F9f6e_p6wlL8MzngFLNPf7fe1Dntt-g",
-
-            authDomain: "sho-s3ro.firebaseapp.com",
-
-            databaseURL: "https://sho-s3ro-default-rtdb.firebaseio.com",
-
-            projectId: "sho-s3ro",
-
-            storageBucket: "sho-s3ro.appspot.com",
-
-            messagingSenderId: "374838538187",
-
-            appId: "1:374838538187:web:5c6df9d0556dd2eef3d04e",
-
-            measurementId: "G-5MMN5RVQTD"
-
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
-
-    <!--fire base is done babe-->
-
+  
 
 
     <script src="../assets/js/lib/jquery-3.4.1.min.js"></script>
@@ -373,7 +343,9 @@
     <!-- Owl Carousel -->
     <script src="../assets/js/plugins/owl-carousel/owl.carousel.min.js"></script>
     <!-- Base Js File -->
-    <script src="../assets/js/index.js"></script>
+
+   
+
    
 
 
