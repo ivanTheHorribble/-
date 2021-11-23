@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Finapp - Mobile Template</title>
+    <title>Ali ayad</title>
     <link rel="stylesheet" href="../assets/css/style1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Finapp HTML Mobile Template">
@@ -16,25 +16,33 @@
 </head>
 
 <body onload="prices();"  style="font-family: lateef ,serif; font-size: 28px;">
-    <script
-
-    
-    type="text/javascript" src="../assets/js/main.js">
+  
 
 
-</script>
-
-
-    <div class="appHeader">
-        <div class="left">
-            <a href="javascript:;" class="headerButton goBack">
-                <ion-icon name="chevron-back-outline"></ion-icon>
-            </a>
-        </div>
-        <div class="pageTitle">أسعار السلع</div>
-        <div class="right"></div>
+  <!-- App Header -->
+  <div class="appHeader">
+    <div class="left">
+        <a href="#" onclick="refresh();" class="headerButton" onclick="toast('toast-1', 2000)">
+            <div id="snackbar" style="font-size: 25px;">تم تحديث أسعر ألسلع</div>
+            <img id="imgR" src="../assets/img/sample/icons/refresh.png" alt="image" class="imaged w32">
+            <br>
+        </a>
+       
     </div>
-    <!-- * App Header -->
+    <div class="pageTitle" style="font-family: lateef, sarif; font-size: 30px;">
+        أسعار ألسلع
+    </div>
+    <div class="right">
+        <a href="home.html" class="headerButton goBack">
+            <img class="rotate90" id="imgR" src="../assets/img/sample/icons/back.png" alt="image" style="width: 32px; height: 32px;">
+        </a>
+
+
+
+    </div>
+</div>
+<!-- * App Header -->
+
 
     <!-- Extra Header -->
     <div class="extraHeader">
@@ -68,7 +76,7 @@
           <!-- item -->
           <a href="app-transaction-detail.html" class="item">
             <div class="right">
-                <div class="price text-danger" id="cow">5,000L.L</div>
+                <div class="price text-danger" id="cow"></div>
             </div>
             
             <div class="detail">
@@ -85,7 +93,7 @@
            <!-- item -->
            <a href="app-transaction-detail.html" class="item">
             <div class="right">
-                <div class="price text-danger" id="lamb">5,000L.L</div>
+                <div class="price text-danger" id="lamb"></div>
             </div>
             
             <div class="detail">
@@ -102,7 +110,7 @@
             <!-- item -->
             <a href="app-transaction-detail.html" class="item">
                 <div class="right">
-                    <div class="price text-danger" id="chicken">5,000L.L</div>
+                    <div class="price text-danger" id="chicken"></div>
                 </div>
                 
                 <div class="detail">
@@ -119,7 +127,7 @@
             <!-- item -->
             <a href="app-transaction-detail.html" class="item">
                 <div class="right">
-                    <div class="price text-danger" id="fish">5,000L.L</div>
+                    <div class="price text-danger" id="fish"></div>
                 </div>
                 
                 <div class="detail">
@@ -145,7 +153,7 @@
    <!-- item -->
    <a href="app-transaction-detail.html" class="item">
     <div class="right">
-        <div class="price text-danger" id="water">5,000L.L</div>
+        <div class="price text-danger" id="water"></div>
     </div>
     
     <div class="detail">
@@ -162,7 +170,7 @@
          <!-- item -->
          <a href="app-transaction-detail.html" class="item">
             <div class="right">
-                <div class="price text-danger" id="bread">5,000L.L</div>
+                <div class="price text-danger" id="bread"></div>
             </div>
             
             <div class="detail">
@@ -179,7 +187,7 @@
             <!-- item -->
             <a href="app-transaction-detail.html" class="item">
                 <div class="right">
-                    <div class="price text-danger" id="egg">5,000L.L</div>
+                    <div class="price text-danger" id="egg"></div>
                 </div>
                 
                 <div class="detail">
@@ -196,7 +204,7 @@
             <!-- sugar -->
             <a href="app-transaction-detail.html" class="item">
                 <div class="right">
-                    <div class="price text-danger" id="sugar">5,000L.L</div>
+                    <div class="price text-danger" id="sugar"></div>
                 </div>
                 
                 <div class="detail">
@@ -213,7 +221,7 @@
                             <!-- item -->
             <a href="app-transaction-detail.html" class="item">
                 <div class="right">
-                    <div class="price text-danger" id="cofe">5,000L.L</div>
+                    <div class="price text-danger" id="cofe"></div>
                 </div>
                 
                 <div class="detail">
@@ -233,12 +241,12 @@
 
     <!-- Transactions -->
     <div class="section mt-2">
-        <div class="section-title" style="font-size: 30px;">النفط ومشتقاته</div>
+        <div class="section-title" style="font-size: 30px;">ألمحروقات</div>
         <div class="transactions">
             <!-- item -->
             <a href="app-transaction-detail.html" class="item">
                 <div class="right">
-                    <div class="price text-danger" id="gas">5,000L.L</div>
+                    <div class="price text-danger" id="gas"></div>
                 </div>
                 
                 <div class="detail">
@@ -255,7 +263,7 @@
            <!-- item -->
            <a href="app-transaction-detail.html" class="item">
             <div class="right">
-                <div class="price text-danger" id="g95">5,000L.L</div>
+                <div class="price text-danger" id="g95"></div>
             </div>
             
             <div class="detail">
@@ -272,7 +280,7 @@
        <!-- item -->
        <a href="app-transaction-detail.html" class="item">
         <div class="right">
-            <div class="price text-danger" id="g98">5,000L.L</div>
+            <div class="price text-danger" id="g98"></div>
         </div>
         
         <div class="detail">
@@ -289,7 +297,7 @@
          <!-- item -->
          <a href="app-transaction-detail.html" class="item">
             <div class="right">
-                <div class="price text-danger" id="disl">5,000L.L</div>
+                <div class="price text-danger" id="disl"></div>
             </div>
             
             <div class="detail">
@@ -316,7 +324,7 @@
 <!-- item -->
 <a href="app-transaction-detail.html" class="item">
 <div class="right">
-    <div class="price text-danger" id="gold">5,000L.L</div>
+    <div class="price text-danger" id="gold"></div>
 </div>
 
 <div class="detail">
@@ -333,7 +341,7 @@
    <!-- item -->
    <a href="app-transaction-detail.html" class="item">
     <div class="right">
-        <div class="price text-danger" id="oil">5,000L.L</div>
+        <div class="price text-danger" id="oil"></div>
     </div>
     
     <div class="detail">
@@ -350,7 +358,7 @@
  <!-- item -->
  <a href="app-transaction-detail.html" class="item">
     <div class="right">
-        <div class="price text-danger" id="bit">5,000L.L</div>
+        <div class="price text-danger" id="bit"></div>
     </div>
     
     <div class="detail">
@@ -367,7 +375,7 @@
 <!-- item -->
 <a href="app-transaction-detail.html" class="item">
 <div class="right">
-    <div class="price text-danger" id="eth">5,000L.L</div>
+    <div class="price text-danger" id="eth"></div>
 </div>
 
 <div class="detail">
@@ -458,7 +466,13 @@
 
 
 
+    <script
 
+    
+    type="text/javascript" src="../assets/js/main.js">
+
+
+</script>
 
 
 </body>

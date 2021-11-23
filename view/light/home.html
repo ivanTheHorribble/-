@@ -2,30 +2,25 @@
 <html lang="ar">
 
 
-<head>
-    <meta charset="utf-8" />
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Finapp - Mobile Template</title>
-    <link rel="stylesheet" href="../assets/css/style1.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Finapp HTML Mobile Template">
-    <meta name="keywords" content="bootstrap, mobile template, cordova, phonegap, mobile, html, responsive" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png" sizes="32x32">
-    <link rel="shortcut icon" href="../assets/img/favicon.png">
-</head>
-
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ali ayad</title>
+        <link rel="stylesheet" href="../assets/css/style1.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Done by ali ayad">
+        <meta name="keywords" content="dollar,rate" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="../assets/img/favicon.png" sizes="32x32">
+        <link rel="shortcut icon" href="../assets/img/favicon.png">
+    </head>
 
 <!--firebase Script-------------------------------------------------------------------->
 
 <!-- *firebase Script-------------------------------------------------------------------->
 
 <body onload="getdata();">
-    <script type="text/javascript" src="../assets/js/main.js">
 
-
-    </script>
 
 
     <!-- App Header -->
@@ -62,8 +57,8 @@
                     <div class="right">
                         <div id="loadd1" class="spinner-grow text-primary" role="status">
                         </div>
-                        <span class="title">Total Balance</span>
-                        <h1 class="total" id='lbpMain'>...تحديث</h1>
+                        <span class="title" style="font-family: lateef, sarif; font-size: 20px;">أخر تحديث</span>
+                        <h1 class="total" id='lbpMain'></h1>
                     </div>
                 </div>
                 <!-- * Balance -->
@@ -82,16 +77,16 @@
                         </a>
                     </div>
                     <div class="item">
-                        <a id="eu">
+                        <a href="convert.html">
                             <div class="icon-wrapper bg-success">
-                                <img src="../assets/img/sample/icons/euro.png" alt="img" class="image-block imaged w48">
+                                <img src="../assets/img/sample/icons/exchange.png" alt="img" class="image-block imaged w48">
                             </div>
-                            <strong style="font-family: 'Lateef',  serif; font-size: 20px;">يورو</strong>
+                            <strong style="font-family: 'Lateef',  serif; font-size: 20px;">محول ألعملة</strong>
                         </a>
                     </div>
                     
                     <div class="item">
-                        <a href="#" data-toggle="modal" id="syr">
+                        <a  id="syr">
                             <div class="icon-wrapper">
                                 <img src="../assets/img/sample/icons/syria.png" alt="img"
                                     class="image-block imaged w48">
@@ -100,7 +95,7 @@
                         </a>
                     </div>
                     <div class="item">
-                        <a href="#" data-toggle="modal" id="leb">
+                        <a  id="leb">
                             <div class="icon-wrapper bg-danger">
                                 <img src="../assets/img/sample/icons/leb.png" alt="img" class="image-block imaged w48">
                             </div>
@@ -123,7 +118,7 @@
                             <div class="title">شراء</div>
                             <div id="loadd2" class="spinner-grow text-primary" role="status">
                             </div>
-                            <div class="value text-success" id="buyText">...تحديث</div>
+                            <div class="value text-success" id="buyText"></div>
                         </div>
                     </div>
                     <div class="col-6">
@@ -131,19 +126,19 @@
                             <div class="title">بيع</div>
                             <div id="loadd3" class="spinner-grow text-primary" role="status">
                             </div>
-                            <div class="value text-danger" id="sellText">...تحديث</div>
+                            <div class="value text-danger" id="sellText"></div>
                         </div>
                     </div>
                 </div>
                 <br>
-                <h2>أمس</h2>
+                <h2 style="font-family: lateef, sarif; font-size: 25px;">ألسعر الرسمي</h2>
                 <div class="row mt-2">
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">شراء</div>
                             <div id="loadd4" class="spinner-grow text-primary" role="status">
                             </div>
-                            <div class="value" id="pBuyText">...تحديث</div>
+                            <div class="value" id="pBuyText"></div>
                         </div>
                     </div>
                     <div class="col-6">
@@ -151,7 +146,7 @@
                             <div class="title">بيع</div>
                             <div id="loadd5" class="spinner-grow text-primary" role="status">
                             </div>
-                            <div class="value" id="pSellText">...تحديث</div>
+                            <div class="value" id="pSellText"></div>
                         </div>
                     </div>
 
@@ -160,14 +155,14 @@
             <!-- * Stats -->
             <!-- Transactions -->
             <div class="section mt-2">
-                <div class="section-title">النفط ومشتقاته</div>
+                <div class="section-title" style="font-family: lateef, sarif; font-size: 25px;">أسعار ألمحروقات</div>
                 <div class="transactions">
                     <!-- item -->
                     <a href="app-transaction-detail.html" class="item">
                         <div class="right">
                             <div id="loadd6" class="spinner-grow text-primary" role="status">
                             </div>
-                            <div class="price text-danger" id="gas">5,000L.L</div>
+                            <div class="price text-danger" id="gas"></div>
                         </div>
 
                         <div class="detail">
@@ -187,7 +182,7 @@
                         <div class="right">
                             <div id="loadd7" class="spinner-grow text-primary" role="status">
                             </div>
-                            <div class="price text-danger" id="g95">5,000L.L</div>
+                            <div class="price text-danger" id="g95"></div>
                         </div>
 
                         <div class="detail">
@@ -206,7 +201,7 @@
                         <div class="right">
                             <div id="loadd8" class="spinner-grow text-primary" role="status">
                             </div>
-                            <div class="price text-danger" id="g98">5,000L.L</div>
+                            <div class="price text-danger" id="g98"></div>
                         </div>
 
                         <div class="detail">
@@ -225,7 +220,7 @@
                         <div class="right">
                             <div id="loadd9" class="spinner-grow text-primary" role="status">
                             </div>
-                            <div class="price text-danger" id="disl">5,000L.L</div>
+                            <div class="price text-danger" id="disl"></div>
                         </div>
 
                         <div class="detail">
@@ -243,7 +238,11 @@
                 </div>
             </div>
       
-
+<br>
+            <div>
+                <a href="prices.html" class="btn btn-block btn-primary btn-lg">مشاهدة ألمزيد</a>
+            </div>
+ 
 
 <br>
     <div class="alert alert-outline-danger mb-1" role="alert" style="text-align: center; background-color: #fff;">
@@ -312,14 +311,17 @@
     <!-- Bootstrap-->
     <script src="../assets/js/lib/popper.min.js"></script>
     <script src="../assets/js/lib/bootstrap.min.js"></script>
-    <!-- Ionicons -->
-    <script src="../../../../../unpkg.com/ionicons%405.0.0/dist/ionicons.js"></script>
+    
     <!-- Owl Carousel -->
     <script src="../assets/js/plugins/owl-carousel/owl.carousel.min.js"></script>
     <!-- Base Js File -->
     <script src="../assets/js/base.js"></script>
 
 
+    <script type="text/javascript" src="../assets/js/main.js">
+
+
+    </script>
     <!-- firebase --------->
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
 
@@ -352,7 +354,6 @@
     </script>
 
     <!--fire base is done babe-->
-
 
 
 

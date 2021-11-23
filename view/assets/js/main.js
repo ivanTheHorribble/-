@@ -1,3 +1,6 @@
+
+var
+currency = "lb";
 // euro =======================================
 var euro= "0.8",
 seuro= "0.75";
@@ -74,11 +77,52 @@ var
 
 var tagg = "lb";
 
+// news variable ////////////////////////////////////////////
+var 
+//lb ////////////////////
+lt1 = "الوضع في لبنان",
+lt2 = "الوضع في لبنان",
+lt3 = "الوضع في لبنان",
+lt4 = "الوضع في لبنان",
+lt5 = "الوضع في لبنان",
+lt6 = "الوضع في لبنان",
+
+li1 = "../assets/imag/sample/icons/leb.jpg";
+li2 = "../assets/imag/sample/icons/leb.jpg";
+li3 = "../assets/imag/sample/icons/leb.jpg";
+li4 = "../assets/imag/sample/icons/leb.jpg";
+li5 = "../assets/imag/sample/icons/leb.jpg";
+li6 = "../assets/imag/sample/icons/leb.jpg";
+
+
+//syria ////////////////////
+st1 = "الوضع ف لبنان",
+st2 = "الوضع ي لبنان",
+st3 = "الوضع ف لبنان",
+st4 = "الوضع ف لبنان",
+st5 = "الوضع ف لبنان",
+st6 = "الوضع ف لبنان",
+
+si1 = "../assets/imag/sample/icons/leb.jpg";
+si2 = "../assets/imag/sample/icons/leb.jpg";
+si3 = "../assets/imag/sample/icons/leb.jpg";
+si4 = "../assets/imag/sample/icons/leb.jpg";
+si5 = "../assets/imag/sample/icons/leb.jpg";
+si6 = "../assets/imag/sample/icons/leb.jpg";
 
 
 
 
 
+
+
+
+
+function refresh() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
 
 
 
@@ -136,7 +180,15 @@ function update() {
 
 function getdata() {
 
-
+    
+    firebase.database().ref('price/dollar').once('value').then(function (snapshot) {
+        var lbuy=snapshot.val().lbpB;
+        var lsell=snapshot.val().lbpS;
+        var Plbuy=snapshot.val().PrlbpB;
+        var Plsell=snapshot.val().PrlbpS;
+      
+    
+    
 
 
 
@@ -150,7 +202,7 @@ function getdata() {
         psell = document.getElementById("pSellText"),
         leb = document.getElementById("leb"),
         syr = document.getElementById("syr");
-    currency = "";
+    
 
     main.innerHTML = nf.format(lbuy) + '' + " L.L.";
     sell.innerHTML = nf.format(lsell) + '' + " L.L.";
@@ -163,9 +215,22 @@ function getdata() {
     document.getElementById("gas").innerHTML = nf.format(lgas) + '' + "L.L.";
 
     leb.addEventListener("click", function (e) {
-
-        update();
         currency = "lb";
+        firebase.database().ref('price/dollar').once('value').then(function (snapshot) {
+            var lbuy=snapshot.val().lbpB;
+            var lsell=snapshot.val().lbpS;
+            var Plbuy=snapshot.val().PrlbpB;
+            var Plsell=snapshot.val().PrlbpS;
+        
+        
+        
+    
+    
+    
+        update();
+    
+        
+    
         main.innerHTML = nf.format(lbuy) + '' + " L.L.";
         sell.innerHTML = nf.format(lsell) + '' + " L.L.";
         buy.innerHTML = nf.format(lbuy) + '' + " L.L.";
@@ -175,11 +240,21 @@ function getdata() {
         document.getElementById("g98").innerHTML = nf.format(lg98) + '' + "L.L.";
         document.getElementById("g95").innerHTML = nf.format(lg95) + '' + "L.L.";
         document.getElementById("gas").innerHTML = nf.format(lgas) + '' + "L.L.";
-
+    
+        });
 
     });
-    syr.addEventListener("click", function (e) {
 
+
+
+
+    syr.addEventListener("click", function (e) {
+        firebase.database().ref('price/dollar').once('value').then(function (snapshot) {
+    
+            var sbuy=snapshot.val().syb;
+            var ssell=snapshot.val().sys;
+            var Psbuy=snapshot.val().psyb;
+            var Pssell=snapshot.val().psys;
 
         update();
         currency = "sy";
@@ -193,13 +268,19 @@ function getdata() {
         document.getElementById("g95").innerHTML = nf.format(sg95) + '' + "S.L.";
         document.getElementById("gas").innerHTML = nf.format(sgas) + '' + "S.L.";
 
-
+        });
     });
 
     document.getElementById("refresh").addEventListener("click", function (e) {
+
         if (currency == "lb") {
 
-
+            firebase.database().ref('price/dollar').once('value').then(function (snapshot) {
+                var lbuy=snapshot.val().lbpB;
+                var lsell=snapshot.val().lbpS;
+                var Plbuy=snapshot.val().PrlbpB;
+                var Plsell=snapshot.val().PrlbpS;
+            
             update();
             currency = "lb";
             main.innerHTML = nf.format(lbuy) + '' + " L.L.";
@@ -212,10 +293,17 @@ function getdata() {
             document.getElementById("g95").innerHTML = nf.format(lg95) + '' + "L.L.";
             document.getElementById("gas").innerHTML = nf.format(lgas) + '' + "L.L.";
 
-
+            });
 
         } else {
 
+
+            firebase.database().ref('price/dollar').once('value').then(function (snapshot) {
+    
+                var sbuy=snapshot.val().syb;
+                var ssell=snapshot.val().sys;
+                var Psbuy=snapshot.val().psyb;
+                var Pssell=snapshot.val().psys;
             currency = "sy";
             update();
             main.innerHTML = nf.format(sbuy) + '' + " S.L.";
@@ -227,10 +315,14 @@ function getdata() {
             document.getElementById("g98").innerHTML = nf.format(sg98) + '' + "S.L.";
             document.getElementById("g95").innerHTML = nf.format(sg95) + '' + "S.L.";
             document.getElementById("gas").innerHTML = nf.format(sgas) + '' + "S.L.";
-
+            });
         }
 
+
     });
+
+});
+
 }
 
 
@@ -441,8 +533,10 @@ function converter() {
         document.getElementById('img1').src = "../assets/img/sample/icons/leb.png";
         document.getElementById('n1').innerHTML = "LEBANEASE POUND>";
         currencyTag = " L.L.";
-        input.innerHTML = "1" + '' + currencyTag;
-
+        dRate = dome * upRate;
+        dRate = dRate / dwnRate;
+        input.innerHTML = nf.format(dome)+ '' + currencyTag;
+        output.innerHTML = nf.format(dRate) + '' + currencyTag;
     });
 
 
@@ -451,8 +545,10 @@ function converter() {
         document.getElementById('img1').src = "../assets/img/sample/icons/dollar.png";
         document.getElementById('n1').innerHTML = "USD";
         currencyTag = " $";
-        input.innerHTML = "1" + '' + currencyTag;
-
+        dRate = dome * upRate;
+        dRate = dRate / dwnRate;
+        input.innerHTML = nf.format(dome)+ '' + currencyTag;
+        output.innerHTML = nf.format(dRate) + '' + currencyTag;
     });
 
     s1.addEventListener("click", function (e) {
@@ -460,16 +556,20 @@ function converter() {
         document.getElementById('img1').src = "../assets/img/sample/icons/syria.png";
         document.getElementById('n1').innerHTML = "SYRIAN LIRA>";
         currencyTag = " S.L.";
-        input.innerHTML = "1" + '' + currencyTag;
-
+        dRate = dome * upRate;
+        dRate = dRate / dwnRate;
+        input.innerHTML = nf.format(dome)+ '' + currencyTag;
+        output.innerHTML = nf.format(dRate) + '' + currencyTag;
     });
     e1.addEventListener("click", function (e) {
 
         document.getElementById('img1').src = "../assets/img/sample/icons/euro.png";
         document.getElementById('n1').innerHTML = "EURO>";
         currencyTag = " €";
-        input.innerHTML = "1" + '' + currencyTag;
-
+        dRate = dome * upRate;
+        dRate = dRate / dwnRate;
+        input.innerHTML = nf.format(dome)+ '' + currencyTag;
+        output.innerHTML = nf.format(dRate) + '' + currencyTag;
     });
 
     //down data seh....; ===================================================
@@ -571,5 +671,86 @@ function prices() {
 
 
     }
+
+
+    
+
+}
+
+
+
+function news(){
+
+    var 
+    t1=document.getElementById('t1'),
+    t2=document.getElementById('t2'),
+    t3=document.getElementById('t3'),
+    t4=document.getElementById('t4'),
+    t5=document.getElementById('t5'),
+    t6=document.getElementById('t6'),
+   
+    i1=document.getElementById('i1'),
+    i2=document.getElementById('i2'),
+    i3=document.getElementById('i3'),
+    i4=document.getElementById('i4'),
+    i5=document.getElementById('i5'),
+    i6=document.getElementById('i6');
+
+
+    if (currency == "lb"){
+//first
+  t1.innerHTML= lt1;
+  i1.src= li1;
+//
+//sec
+t2.innerHTML=  lt2;
+i2.src= li2;
+//
+//third
+t3.innerHTML=  lt3;
+i3.src= li3;
+//
+//four
+t4.innerHTML=  lt4;
+i4.src= li4;
+//
+//five
+t5.innerHTML=  lt5;
+i5.src= li5;
+//
+//six
+t6.innerHTML=  lt6;
+i6.src= li6;
+//
+    }
+    else {
+
+//first
+t1.innerHTML= st1;
+i1.src= li1;
+//
+//sec
+t2.innerHTML=  st2;
+i2.src= li2;
+//
+//third
+t3.innerHTML=  st3;
+i3.src= li3;
+//
+//four
+t4.innerHTML=  st4;
+i4.src= li4;
+//
+//five
+t5.innerHTML=  st5;
+i5.src= li5;
+//
+//six
+t6.innerHTML=  st6;
+i6.src= si6;
+
+    }
+
+
 
 }
